@@ -1,0 +1,98 @@
+<OnTracTrackingResult xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance' xmlns:xsd='http://www.w3.org/2001/XMLSchema'>
+  <Shipments>
+    <Shipment>
+      <Events>
+        <Event>
+          <Status>CL</Status>
+          <Description>DELIVERED</Description>
+          <EventTime>2013-11-15T13:27:42</EventTime>
+          <Facility>Reno                </Facility>
+          <City>SPARKS</City>
+          <State>NV</State>
+          <Zip>89434</Zip>
+        </Event>
+        <Event>
+          <Status>OD</Status>
+          <Description>OUT FOR DELIVERY</Description>
+          <EventTime>2013-11-15T08:39:00</EventTime>
+          <Facility>Reno                </Facility>
+          <City>SPARKS</City>
+          <State>NV</State>
+          <Zip>89434</Zip>
+        </Event>
+        <Event>
+          <Status>OS</Status>
+          <Description>PACKAGE RECEIVED AT FACILITY</Description>
+          <EventTime>2013-11-15T08:31:54.157</EventTime>
+          <Facility>Reno                </Facility>
+          <City>SPARKS</City>
+          <State>NV</State>
+          <Zip>89434</Zip>
+        </Event>
+        <Event>
+          <Status>OS</Status>
+          <Description>PACKAGE RECEIVED AT FACILITY</Description>
+          <EventTime>2013-11-14T20:56:01.643</EventTime>
+          <Facility>Commerce            </Facility>
+          <City>COMMERCE</City>
+          <State>CA</State>
+          <Zip>90040</Zip>
+        </Event>
+        <Event>
+          <Status>OS</Status>
+          <Description>PACKAGE RECEIVED AT FACILITY</Description>
+          <EventTime>2013-11-14T18:05:53</EventTime>
+          <Facility>SanDiego            </Facility>
+          <City>SAN DIEGO</City>
+          <State>CA</State>
+          <Zip>92121</Zip>
+        </Event>
+        <Event>
+          <Status>PU</Status>
+          <Description>PICKED UP FROM SHIPPER</Description>
+          <EventTime>2013-11-14T17:12:00</EventTime>
+          <Facility>SanDiego            </Facility>
+          <City>SAN DIEGO</City>
+          <State>CA</State>
+          <Zip>92121</Zip>
+        </Event>
+        <Event>
+          <Status>XX</Status>
+          <Description>DATA ENTRY</Description>
+          <EventTime>2013-11-13T11:55:53.047</EventTime>
+          <Facility>SanDiego            </Facility>
+          <City>SAN DIEGO</City>
+          <State>CA</State>
+          <Zip>92121</Zip>
+        </Event>
+      </Events>
+      <Tracking>D10010633989516</Tracking>
+      <Exp_Del_Date>2013-11-15T13:28:00</Exp_Del_Date>
+      <ShipDate>2013-11-14T00:00:00</ShipDate>
+      <Delivered>true</Delivered>
+      <Name>MILES GREINER</Name>
+      <Contact/>
+      <Addr1>2915 SAGITTARIUS DR.</Addr1>
+      <Addr2/>
+      <Addr3/>
+      <City>RENO</City>
+      <State>NV</State>
+      <Zip>89509</Zip>
+      <Service>C </Service>
+      <POD>front door</POD>
+      <Error/>
+      <Reference>1004151</Reference>
+      <Reference2/>
+      <Reference3/>
+      <ServiceCharge>9.6</ServiceCharge>
+      <FuelCharge>0.6</FuelCharge>
+      <TotalChrg>10.2</TotalChrg>
+      <Residential>true</Residential>
+      <Weight>4</Weight>
+      <Signature/>
+    </Shipment>
+  </Shipments>
+  <Note>Results Provided by OnTrac at 11/19/2013 12:46 PM</Note>
+  <Logo/>
+  <Error/>
+</OnTracTrackingResult>
