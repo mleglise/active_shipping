@@ -412,6 +412,7 @@ module ActiveMerchant
             RateEstimate.new(origin,destination,@@name,"USPS #{service_name}",
                                       :package_rates => rate_hash[service_name][:package_rates],
                                       :service_code => rate_hash[service_name][:service_code],
+                                      :delivery_estimate => rate_hash[service_name][:delivery_estimate],
                                       :currency => 'USD')
           end
           rate_estimates.reject! {|e| e.package_count != packages.length}
@@ -455,6 +456,7 @@ module ActiveMerchant
             # later packages with same service will add to them
             this_service = rate_hash[service_name] ||= {}
             this_service[:service_code] ||= service_response_node.attributes[service_code_node]
+            this_service[:delivery_estimate] ||= service_response_node.get_text('SvcCommitments').to_s
             package_rates = this_service[:package_rates] ||= []
             this_package_rate = {:package => this_package,
                                  :rate => Package.cents_from(service_response_node.get_text(rate_node).to_s.to_f)}
