@@ -13,6 +13,7 @@ module ActiveMerchant #:nodoc:
       attr_reader :shipping_date
       attr_reader :delivery_date  # Usually only available for express shipments
       attr_reader :delivery_range # Min and max delivery estimate in days
+      attr_reader :delivery_estimate # Delivery estimate string
       attr_reader :negotiated_rate
 
       def initialize(origin, destination, carrier, service_name, options={})
@@ -27,6 +28,7 @@ module ActiveMerchant #:nodoc:
         @negotiated_rate = options[:negotiated_rate] ? Package.cents_from(options[:negotiated_rate]) : nil
         @currency = options[:currency]
         @delivery_range = options[:delivery_range] ? options[:delivery_range].map { |date| date_for(date) }.compact : []
+        @delivery_estimate = options[:delivery_estimate]
         @shipping_date = date_for(options[:shipping_date])
         @delivery_date = @delivery_range.last
       end
