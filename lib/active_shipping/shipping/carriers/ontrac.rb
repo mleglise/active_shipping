@@ -357,16 +357,27 @@ module ActiveMerchant
 
       def location_from_address_node(address)
         return nil unless address
-        Location.new(
-          :country =>     'US',
-          :postal_code => node_text_or_nil(address.elements['Zip']),
-          :province =>    node_text_or_nil(address.elements['State']),
-          :city =>        node_text_or_nil(address.elements['City']),
-          :address1 =>    node_text_or_nil(address.elements['Addr1']),
-          :address2 =>    node_text_or_nil(address.elements['Addr2']),
-          :address3 =>    node_text_or_nil(address.elements['Addr3']),
-          :name =>        node_text_or_nil(address.elements['Name'])
-        )
+        # Catch the "Corporate" facility, suppress the location.
+        # This is to prevent customer confusion.
+        # Only used when head office makes a note.
+        facility = node_text_or_nil(address.elements['Facility'])
+        if facility and node_text_or_nil(address.elements['Facility']).strip == "Corporate"
+          Location.new(
+            :name => 'Note from Corporate Office'
+          )
+        else
+          # Default
+          Location.new(
+            :country =>     'US',
+            :postal_code => node_text_or_nil(address.elements['Zip']),
+            :province =>    node_text_or_nil(address.elements['State']),
+            :city =>        node_text_or_nil(address.elements['City']),
+            :address1 =>    node_text_or_nil(address.elements['Addr1']),
+            :address2 =>    node_text_or_nil(address.elements['Addr2']),
+            :address3 =>    node_text_or_nil(address.elements['Addr3']),
+            :name =>        node_text_or_nil(address.elements['Name'])
+          )
+        end
       end
 
       def response_success?(xml)
